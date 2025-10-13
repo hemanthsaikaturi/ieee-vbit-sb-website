@@ -18,7 +18,7 @@ const objectives = [
 
 // Data for the stats section
 const stats = [
-    { value: 43, label: 'Executive Members', color: 'text-green-500' },
+    { value: 39, label: 'Executive Members', color: 'text-green-500' },
     { value: 3, label: 'Chapters', color: 'text-yellow-500' },
     { value: 1, label: 'Affinity Groups', color: 'text-purple-500' },
 ];

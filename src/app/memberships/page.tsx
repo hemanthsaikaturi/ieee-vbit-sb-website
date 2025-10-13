@@ -20,7 +20,7 @@ export default function MembershipsPage() {
           <div className="container mx-auto px-4 max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Memberships</h1>
             <p className="text-lg text-blue-100 leading-relaxed text-justify">
-              IEEE membership offers access to technical innovation, cutting-edge information, networking opportunities, and exclusive member benefits. Members support IEEE's mission to advance technology for humanity and the profession, while memberships build a platform to introduce careers in technology to students around the world.
+              IEEE membership offers access to technical innovation, cutting-edge information, networking opportunities and exclusive member benefits. Members support IEEE's mission to advance technology for humanity and the profession, while memberships build a platform to introduce careers in technology to students around the world.
             </p>
           </div>
         </section>
@@ -30,7 +30,7 @@ export default function MembershipsPage() {
               <div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-2">Community</h2>
                 <p className="text-gray-600 leading-relaxed text-justify">
-                  Join the world's largest technical professional association via an IEEE and/or IEEE society memberships. Through these memberships, you can stay current in your chosen technology profession, keep in touch with your peers, and invest in your career advancement. Join IEEE or an IEEE society.
+                  Join the world's largest technical professional association via an IEEE and/or IEEE society memberships. Through these memberships, you can stay current in your chosen technology profession, keep in touch with your peers and invest in your career advancement. Join IEEE or an IEEE society.
                 </p>
               </div>
               <div>
@@ -42,7 +42,7 @@ export default function MembershipsPage() {
               <div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-2">Resource & Recognition</h2>
                 <p className="text-gray-600 leading-relaxed text-justify">
-                  Being a student is the first job of your professional career. Let IEEE help with valuable scholarship, and award program opportunities.
+                  Being a student is the first job of your professional career. Let IEEE help with valuable scholarship and award program opportunities.
                 </p>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function MembershipsPage() {
         <section className="bg-white py-20">
           <div className="container mx-auto text-center px-4">
             <h2 className="text-4xl font-bold text-gray-800 mb-10">Discover the Benefits of IEEE Membership</h2>
-            <YouTubeEmbed videoId="WBCt8MaNafw" title="IEEE Membership... Why We Joined" />
+            <YouTubeEmbed videoId="HrhHdyRXt7I" title="IEEE Membership... Why We Joined" />
           </div>
         </section>
 

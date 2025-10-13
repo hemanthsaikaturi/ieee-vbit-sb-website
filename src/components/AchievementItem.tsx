@@ -1,9 +1,7 @@
 import type { Achievement } from '@/data/achievementsData';
-import { motion, Variants } from 'framer-motion'; // <-- IMPORT 'Variants' TYPE
+import { motion, Variants } from 'framer-motion'; 
 import Image from 'next/image';
 
-// Animation for the component to fade in as part of the stagger
-// UPDATED: Applied the 'Variants' type to the object
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
