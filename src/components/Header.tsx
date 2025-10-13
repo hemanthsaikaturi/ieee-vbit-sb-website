@@ -25,7 +25,6 @@ const navLinks: NavLinks = {
   events: [ { title: 'Gallery', href: '/events/gallery' }, { title: 'Reports', href: '/events/reports' }, ],
 };
 
-// Animation for the menu items to stagger in
 const mobileLinkVariants = {
     initial: { x: -30, opacity: 0 },
     animate: { x: 0, opacity: 1 },
