@@ -7,7 +7,6 @@ import { motion, useAnimation, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 
-// Animation for the container to stagger the children's entry
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -16,7 +15,6 @@ const containerVariants: Variants = {
   },
 };
 
-// Animation for each individual circle on page load
 const itemVariants: Variants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
@@ -26,7 +24,6 @@ const itemVariants: Variants = {
   },
 };
 
-// Unified hover animation variants
 const logoVariants: Variants = {
   initial: { opacity: 1 },
   hover: { opacity: 0, transition: { duration: 0.3, ease: 'easeOut' } },

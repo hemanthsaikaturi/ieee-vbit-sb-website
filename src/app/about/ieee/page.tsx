@@ -28,7 +28,7 @@ const stats = [
 
 export default function AboutIeeePage() {
   const missionText =
-    "IEEE will be essential to the global technical community and to technical professionals everywhere, and be universally recognized for the contributions of technology and of technical professionals in improving global conditions.";
+    "IEEE will be essential to the global technical community and to technical professionals everywhere and be universally recognized for the contributions of technology and of technical professionals in improving global conditions.";
   const visionText =
     "IEEE's core purpose is to foster technological innovation and excellence for the benefit of humanity.";
 

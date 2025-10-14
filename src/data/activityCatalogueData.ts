@@ -14,7 +14,7 @@ export const activities: Activity[] = [
     title: 'DesignX 2.0',
     imageUrl: '/placeholders/designx_poster.jpg',
     modalContent: {
-      title: 'DesignX 2.0', // Note: I corrected the title to match the event
+      title: 'DesignX 2.0',
       date: '27th & 28th September, 2024',
       description: 'DesignX 2.0 is an engaging design workshop and competition that challenges participants to apply UI/UX principles and graphic design techniques for effective problem-solving and innovation...',
       imageUrl: '/placeholders/designx_details.jpg',
@@ -25,9 +25,9 @@ export const activities: Activity[] = [
     imageUrl: '/placeholders/wieducate_poster.jpg',
     modalContent: {
       title: 'WiEducate 3.0',
-      date: 'October 5th, 2024', // Corrected
+      date: 'October 5th, 2024', 
       description: 'Organized by the IEEE WIE Affinity Group, WiEducate 3.0 is a community outreach program focused on providing foundational STEM education and mentorship to underprivileged students.', // Corrected
-      imageUrl: '/placeholders/wieducate_poster.jpg', // CORRECTED: Using the poster as the detail image
+      imageUrl: '/placeholders/wieducate_poster.jpg', 
     },
   },
   {
@@ -37,7 +37,7 @@ export const activities: Activity[] = [
       title: 'Industrial Visit To Power Grid',
       date: 'November 12th, 2024', // Corrected
       description: 'An exclusive industrial visit for Power & Energy Society members to the Power Grid Corporation, offering invaluable insights into high-voltage transmission systems and modern grid management.', // Corrected
-      imageUrl: '/placeholders/powergrid_poster.jpg', // CORRECTED: Using the poster as the detail image
+      imageUrl: '/placeholders/powergrid_poster.jpg',
     },
   },
   {
@@ -65,7 +65,7 @@ export const activities: Activity[] = [
     imageUrl: '/placeholders/antenna_poster.jpg',
     modalContent: {
       title: 'Workshop on Antenna Design using HFSS',
-      date: 'March 8th, 2025', // Corrected
+      date: 'March 8th, 2025',
       description: 'A specialized, hands-on workshop hosted by the IEEE Communications Society. This session focuses on designing and simulating advanced antennas using industry-standard HFSS software.', // Corrected
       imageUrl: '/placeholders/antenna_poster.jpg', 
     },

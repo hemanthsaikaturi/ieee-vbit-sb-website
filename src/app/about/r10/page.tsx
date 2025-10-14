@@ -20,9 +20,9 @@ export default function AboutR10Page() {
             <p className="text-gray-700 leading-relaxed text-justify">
               The IEEE Region 10, also referred as the Asia Pacific Region,
               comprises of 57- 63 Sections, 6-7 Councils, 17-35 Sub-sections,
-              515 Chapters, 60 Affinity Groups, and 958-1600+ Student Branches.
+              515 Chapters, 60 Affinity Groups and 958-1600+ Student Branches.
               It covers a geographical area stretching from South Korea and
-              Japan in the north - east to New Zealand in the south, and
+              Japan in the north - east to New Zealand in the south and
               Pakistan in the west. With a membership of 107,154-213,619, it is
               one of the largest regions in IEEE. For more info, visit the
               website.
@@ -74,7 +74,7 @@ export default function AboutR10Page() {
           <p className="text-gray-700 leading-relaxed text-justify">
             With its members in 165 countries around the globe, the Region 10
             Congress gathers members of the Asia-Pacific Region together every
-            two years to network, learn about the latest IEEE programs, and
+            two years to network, learn about the latest IEEE programs and
             share strategies for enhancing membership. This is the biggest IEEE
             event for the students, Young Professionals and Women in Engineering
             (WIE) in the region with ample opportunities to explore ideas,

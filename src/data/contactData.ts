@@ -12,18 +12,18 @@ export const contactData: ContactPerson[] = [
     name: 'Dr. N. Arjun',
     role: 'Branch Counselor',
     email: 'arjun.nelikanti@vbit.ac.in',
-    imageUrl: '/placeholders/team/dr_n_arjun.jpg', // Add this image
+    imageUrl: '/placeholders/Contact/dr_n_arjun.jpg',
   },
   {
     name: 'Shiva Sai Nath Munavathu',
     role: 'ChairPerson',
     email: 'mr.shivanayak13@gmail.com',
-    imageUrl: '/placeholders/team/shiva_sai_nath_munavathu.jpg', // Add this image
+    imageUrl: '/placeholders/team/25-26/shiva_sai_nath.jpg',
   },
   {
     name: 'Sai Deekshith Badam',
     role: 'GINI | MDO',
     email: 'badamdeekshith@gmail.com',
-    imageUrl: '/placeholders/team/sai_deekshith_badam_contact.jpg', // Add this image
+    imageUrl: '/placeholders/Contact/sai_deekshith.png',
   },
 ];

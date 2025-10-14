@@ -12,12 +12,10 @@ type NavLink = {
   href: string;
 };
 
-// Define the type for our navLinks object
 type NavLinks = {
   [key: string]: NavLink[];
 };
 
-// Apply the type to our data
 const navLinks: NavLinks = {
   about: [ { title: 'About IEEE', href: '/about/ieee' }, { title: 'About IEEE R10', href: '/about/r10' }, { title: 'About IEEE HYD SECTION', href: '/about/hyd-section' }, { title: 'About IEEE - VBIT SB', href: '/about/vbit-sb' }, { title: 'Memberships', href: '/memberships' }, ],
   societies: [ { title: 'Computer Society', href: '/societies/computer-society' }, { title: 'Communications Society', href: '/societies/communications-society' }, { title: 'Power & Energy Society', href: '/societies/pes' }, { title: 'IEEE WIE - AG', href: '/societies/wie' }, ],
@@ -42,7 +40,6 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Effect to close mobile menu on navigation
   useEffect(() => {
     if (isMobileMenuOpen) setIsMobileMenuOpen(false);
   }, [pathname]);

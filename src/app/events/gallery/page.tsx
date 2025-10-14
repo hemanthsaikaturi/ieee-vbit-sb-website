@@ -1,4 +1,4 @@
-import { GalleryItem } from '@/components/galleryItem';
+import { EventCarouselCard } from '@/components/EventCarouselCard';
 import { galleryData } from '@/data/galleryData';
 import type { Metadata } from 'next';
 
@@ -8,15 +8,20 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <div className="bg-white py-20">
+    <div className="py-20 pattern-background-light">
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-blue-600">Event Gallery</h1>
+        <h1 className="text-5xl font-bold text-blue-600">Event Gallery</h1>
         <p className="text-gray-600 mt-4 text-xl">A glimpse into our moments of learning and community.</p>
       </div>
 
-      <div className="space-y-20">
-        {galleryData.map((item, index) => (
-          <GalleryItem key={item.title} item={item} isReversed={index % 2 !== 0} />
+      {/* UPDATED: Removed the 'space-y-20' class from this div */}
+      <div>
+        {galleryData.map((event, index) => (
+          <EventCarouselCard 
+            key={event.slug} 
+            event={event} 
+            isReversed={index % 2 !== 0} 
+          />
         ))}
       </div>
     </div>

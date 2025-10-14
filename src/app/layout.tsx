@@ -3,7 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Favicon from './favicon.png';
-import { ClientLayoutWrapper } from "@/components/ClientLayoutWrapper"; // <-- Import our new component
+import { ClientLayoutWrapper } from "@/components/ClientLayoutWrapper";
 
 // The metadata object will now work perfectly again
 export const metadata: Metadata = {

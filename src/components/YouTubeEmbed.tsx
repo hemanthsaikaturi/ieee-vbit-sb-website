@@ -5,10 +5,9 @@ type YouTubeEmbedProps = {
   title: string;
 };
 
-// This is a special style object that forces the 16:9 aspect ratio
 const containerStyle: React.CSSProperties = {
   position: 'relative',
-  paddingBottom: '56.25%', // 16:9 Aspect Ratio
+  paddingBottom: '56.25%',
   height: 0,
   overflow: 'hidden',
   maxWidth: '100%',
@@ -23,7 +22,6 @@ const iframeStyle: React.CSSProperties = {
 };
 
 export const YouTubeEmbed = ({ videoId, title }: YouTubeEmbedProps) => (
-  // We removed the Tailwind classes and are now using direct inline styles
   <div className="max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl" style={containerStyle}>
     <iframe
       src={`https://www.youtube-nocookie.com/embed/${videoId}`}

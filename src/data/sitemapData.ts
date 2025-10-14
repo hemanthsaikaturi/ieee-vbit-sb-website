@@ -17,7 +17,7 @@ export const sitemapData: SiteMapSectionData[] = [
     links: [
       { title: 'Home', href: '/' },
       { title: 'IEEE - VBIT SB', href: '/about/vbit-sb' },
-      { title: 'Execom', href: '/execom/2025-26' }, // Link to the most recent team page
+      { title: 'Execom', href: '/execom/2025-26' }, 
       { title: 'Achievements', href: '/achievements' },
       { title: 'Contact Us', href: '/contact' },
     ],

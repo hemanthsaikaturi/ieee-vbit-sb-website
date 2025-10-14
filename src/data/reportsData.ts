@@ -1,7 +1,7 @@
 // Define the structure for a single report
 export type Report = {
   title: string;
-  driveLink: string; // The Google Drive link for the report PDF
+  driveLink: string;
 };
 
 // Define the structure for a group of reports under a specific year
