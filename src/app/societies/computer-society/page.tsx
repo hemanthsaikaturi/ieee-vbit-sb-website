@@ -15,7 +15,7 @@ export default function ComputerSocietyPage() {
 
   return (
     <div>
-      <section className="bg-white py-20">
+      <section className="bg-white py-10">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">IEEE Computer Society</h1>
@@ -31,12 +31,12 @@ export default function ComputerSocietyPage() {
           </div>
         </div>
       </section>
-      <section className="bg-slate-50 py-20">
+      <section className="bg-slate-50 py-10">
         <div className="container mx-auto px-4 max-w-2xl">
           <FeatureCard icon={<Target size={48} className="text-blue-600" />} title="Vision">{visionText}</FeatureCard>
         </div>
       </section>
-      <section className="bg-blue-500 py-20">
+      <section className="bg-blue-500 py-10">
         <div className="container mx-auto text-center px-4">
           <h2 className="text-4xl font-bold text-white mb-10">Benefits of IEEE CS Membership</h2>
           <YouTubeEmbed videoId="ImPpbYW4vGA" title="IEEE CS Membership Video" />

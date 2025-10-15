@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AboutHydSectionPage() {
   return (
     <div className="bg-white">
-        <section className="py-20">
+        <section className="py-10">
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">IEEE Hyderabad Section</h1>

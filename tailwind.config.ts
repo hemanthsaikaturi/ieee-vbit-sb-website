@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: { extend: {} },
   plugins: [
-    require('@tailwindcss/aspect-ratio'), // This line must be present
+    require('@tailwindcss/aspect-ratio'),
   ],
 };
 export default config;

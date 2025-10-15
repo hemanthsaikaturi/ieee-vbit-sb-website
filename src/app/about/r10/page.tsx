@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AboutR10Page() {
   return (
     <div className="bg-white">
-      <section className="py-20">
+      <section className="py-10">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column: Text Content */}
           <div>
@@ -23,7 +23,7 @@ export default function AboutR10Page() {
               515 Chapters, 60 Affinity Groups and 958-1600+ Student Branches.
               It covers a geographical area stretching from South Korea and
               Japan in the north - east to New Zealand in the south and
-              Pakistan in the west. With a membership of 107,154-213,619, it is
+              Pakistan in the west. With a membership of 107, 154-213, 619, it is
               one of the largest regions in IEEE. For more info, visit the
               website.
             </p>
@@ -48,7 +48,7 @@ export default function AboutR10Page() {
         </div>
       </section>
 
-      <section className="py-20 border-t border-gray-100">
+      <section className="py-5 border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-4xl font-bold text-blue-600 mb-4">
             Goals and Objectives
@@ -66,7 +66,7 @@ export default function AboutR10Page() {
         </div>
       </section>
 
-      <section className="py-20 border-t border-gray-100">
+      <section className="py-5 border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-4xl font-bold text-blue-600 mb-4">
             IEEE Region 10 Congress

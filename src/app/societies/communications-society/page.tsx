@@ -30,7 +30,7 @@ const ObjectiveItem = ({ text }: { text: string }) => (
 export default function CommunicationsSocietyPage() {
   return (
     <div>
-      <section className="bg-white py-20">
+      <section className="bg-white py-10">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">Communications Society</h1>
@@ -47,14 +47,14 @@ export default function CommunicationsSocietyPage() {
         </div>
       </section>
 
-      <section className="bg-blue-500 py-20">
+      <section className="bg-blue-500 py-10">
         <div className="container mx-auto text-center px-4">
           <h2 className="text-4xl font-bold text-white mb-10">What People say about ComSoc !</h2>
           <YouTubeEmbed videoId="R0CCnkaEKcs" title="What members say about IEEE Communications Society" />
         </div>
       </section>
 
-      <section className="bg-blue-500 pb-20">
+      <section className="bg-blue-500 pb-10">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-5xl mx-auto">
               {objectives.map((item) => (

@@ -14,7 +14,6 @@ export const CustomLoader = () => {
         transition={{ duration: 0.5, ease: 'easeInOut' }}
         className="flex justify-center items-center h-screen bg-white fixed inset-0 z-50"
       >
-        {/* Main container for the spinner and logos */}
         <div className="relative w-40 h-40 flex justify-center items-center">
           <div className="absolute w-full h-full rounded-full border-4 border-gray-200 border-t-blue-600 animate-spin"></div>
 
@@ -38,8 +37,6 @@ export const CustomLoader = () => {
                   priority={true}
                 />
               </motion.div>
-
-              {/* Main IEEE Logo */}
               <motion.div
                 className="absolute inset-0 flex justify-center items-center"
                 animate={{ opacity: [0, 1, 1, 0, 0] }}

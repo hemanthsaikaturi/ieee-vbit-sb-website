@@ -34,7 +34,7 @@ const ObjectiveItem = ({ text }: { text: string }) => (
 export default function AboutVbitSbPage() {
   return (
     <div>
-        <section className="bg-white py-20">
+        <section className="bg-white py-10">
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">IEEE – VBIT SB</h1>
@@ -72,7 +72,7 @@ export default function AboutVbitSbPage() {
             </div>
           </div>
         </section>
-        <section className="bg-cyan-600 pb-20">
+        <section className="bg-cyan-600 pb-10">
           <div className="container mx-auto px-4">
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
               <div className="grid grid-cols-3 gap-4">

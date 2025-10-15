@@ -32,7 +32,12 @@ export const TeamMemberCard = ({ name, role, imageUrl }: TeamMember) => {
           className="w-full h-full"
           variants={imageVariants}
         >
-          <Image src={imageUrl} alt={name} layout="fill" objectFit="cover" className="transform" />
+          <Image 
+    src={imageUrl} 
+    alt={name} 
+    fill 
+    className="object-cover transform"
+  />
         </motion.div>
       </div>
 

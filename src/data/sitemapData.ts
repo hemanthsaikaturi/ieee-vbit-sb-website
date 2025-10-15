@@ -4,13 +4,10 @@ export type SiteMapLink = {
   href: string;
 };
 
-// Define the structure for a group of links
 export type SiteMapSectionData = {
   title: string;
   links: SiteMapLink[];
 };
-
-// Populate the data, organized by section
 export const sitemapData: SiteMapSectionData[] = [
   {
     title: 'IEEE - VBIT SB',
@@ -45,7 +42,7 @@ export const sitemapData: SiteMapSectionData[] = [
     links: [
       { title: 'Gallery', href: '/events/gallery' },
       { title: 'Reports', href: '/events/reports' },
-      { title: 'Avishkar', href: '#' },
+      { title: 'Avishkar', href: 'http://avishkar2k25.ieeevbitsb.in/' },
     ],
   },
 ];

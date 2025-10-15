@@ -71,7 +71,7 @@ export const teamData2025_26: Team[] = [
     members: [
       {
         name: "K. Isaac",
-        role: "Lead",
+        role: "RSM Lead",
         imageUrl: "/placeholders/team/25-26/k_isaac.jpg",
       },
       {
@@ -102,7 +102,7 @@ export const teamData2025_26: Team[] = [
     members: [
       {
         name: "B. Chitti Sujana",
-        role: "Lead",
+        role: "Design Lead",
         imageUrl: "/placeholders/team/25-26/b_chitti_sujana.jpg",
       },
       {
@@ -170,7 +170,7 @@ export const teamData2025_26: Team[] = [
     members: [
       {
         name: "Khushi",
-        role: "Lead",
+        role: "R&D Lead",
         imageUrl: "/placeholders/team/25-26/khushi.jpg",
       },
       {
@@ -399,7 +399,7 @@ export const teamData2024_25: Team[] = [
     members: [
       {
         name: "Venkat Ramana",
-        role: "Lead",
+        role: "RSM Lead",
         imageUrl: "/placeholders/team/24-25/VenkatRamana.jpg",
       },
       {
@@ -430,7 +430,7 @@ export const teamData2024_25: Team[] = [
     members: [
       {
         name: "P. Siva Teja",
-        role: "Lead",
+        role: "Design Lead",
         imageUrl: "/placeholders/team/24-25/Siva-Teja.jpg",
       },
       {
@@ -732,7 +732,7 @@ export const teamData2023_24: Team[] = [
     members: [
       {
         name: "Pawan Sai",
-        role: "Lead",
+        role: "RSM Lead",
         imageUrl: "/placeholders/team/23-24/pawan.jpg",
       },
       {
@@ -768,7 +768,7 @@ export const teamData2023_24: Team[] = [
     members: [
       {
         name: "T P Varsha Rani",
-        role: "Lead",
+        role: "Design Lead",
         imageUrl: "/placeholders/team/23-24/varsha-e1696430416465.jpeg",
       },
       {
@@ -841,12 +841,12 @@ export const teamData2023_24: Team[] = [
     members: [
       {
         name: "Kannuru Aditya",
-        role: "Lead (Projects & Innovations)",
+        role: "Lead",
         imageUrl: "/placeholders/team/23-24/aditya.jpg",
       },
       {
         name: "Pratham Kamidiri",
-        role: "Co-Lead",
+        role: "Co-ordinator",
         imageUrl: "/placeholders/team/23-24/pratham.jpg",
       },
       {

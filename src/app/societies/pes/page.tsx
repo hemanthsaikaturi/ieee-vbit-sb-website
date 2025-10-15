@@ -16,7 +16,7 @@ export default function PesPage() {
 
   return (
     <div>
-      <section className="bg-white py-20">
+      <section className="bg-white py-10">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">Power and Energy Society</h1>
@@ -33,18 +33,18 @@ export default function PesPage() {
           </div>
         </div>
       </section>
-      <section className="bg-slate-50 py-20">
+      <section className="bg-slate-50 py-10">
         <div className="container mx-auto px-4 max-w-4xl">
           <FeatureCard icon={<Target size={48} className="text-blue-600" />} title="Vision">{visionText}</FeatureCard>
         </div>
       </section>
-      <section className="bg-blue-500 py-20">
+      <section className="bg-blue-500 py-10">
         <div className="container mx-auto text-center px-4">
           <h2 className="text-4xl font-bold text-white mb-10">What do I gain being a PES member</h2>
           <YouTubeEmbed videoId="BrxdLNDxWOw" title="Benefits Of PES Membership" />
         </div>
       </section>
-      <section className="bg-white py-20">
+      <section className="bg-white py-10">
         <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
                 <BenefitCard icon={<Lightbulb size={40} />}>

@@ -34,7 +34,7 @@ export default function AboutIeeePage() {
 
   return (
     <div>
-      <section className="bg-white py-20">
+      <section className="bg-white py-10">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
@@ -59,7 +59,7 @@ export default function AboutIeeePage() {
               Project Contest organized by the IEEE Hyderabad Section and
               secured first prize, highlighting its growing excellence.
             </p>
-            <p>
+            <p className="text-gray-700 leading-relaxed mt-4 text-justify">
               Since its inception, IEEE - VBIT SB has demonstrated sustained and
               appreciable growth, guided by a clear vision and mission. These
               consistent efforts culminated in the branch receiving the
@@ -82,7 +82,7 @@ export default function AboutIeeePage() {
         </div>
       </section>
 
-      <section className="bg-white pb-20">
+      <section className="bg-white pb-5">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <FeatureCard
@@ -101,7 +101,7 @@ export default function AboutIeeePage() {
         </div>
       </section>
 
-      <section className="bg-blue-500 py-20">
+      <section className="bg-blue-500 py-10">
         <div className="container mx-auto text-center px-4">
           <h2 className="text-4xl font-bold text-white mb-10">
             Why to Join IEEE ? Benefits of IEEE !
@@ -113,7 +113,7 @@ export default function AboutIeeePage() {
         </div>
       </section>
 
-      <section className="bg-blue-500 py-20">
+      <section className="bg-blue-500 py-5">
         <div className="container mx-auto px-4">
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-4">

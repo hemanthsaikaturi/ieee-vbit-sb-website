@@ -4,18 +4,11 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
-// Define a clear type for our links
-type NavLink = {
-  title: string;
-  href: string;
-};
-
-type NavLinks = {
-  [key: string]: NavLink[];
-};
-
+// --- TYPE DEFINITIONS ---
+type NavLink = { title: string; href: string; };
+type NavLinks = { [key: string]: NavLink[]; };
 const navLinks: NavLinks = {
   about: [ { title: 'About IEEE', href: '/about/ieee' }, { title: 'About IEEE R10', href: '/about/r10' }, { title: 'About IEEE HYD SECTION', href: '/about/hyd-section' }, { title: 'About IEEE - VBIT SB', href: '/about/vbit-sb' }, { title: 'Memberships', href: '/memberships' }, ],
   societies: [ { title: 'Computer Society', href: '/societies/computer-society' }, { title: 'Communications Society', href: '/societies/communications-society' }, { title: 'Power & Energy Society', href: '/societies/pes' }, { title: 'IEEE WIE - AG', href: '/societies/wie' }, ],
@@ -23,15 +16,42 @@ const navLinks: NavLinks = {
   events: [ { title: 'Gallery', href: '/events/gallery' }, { title: 'Reports', href: '/events/reports' }, ],
 };
 
-const mobileLinkVariants = {
-    initial: { x: -30, opacity: 0 },
-    animate: { x: 0, opacity: 1 },
+// --- ANIMATION VARIANTS ---
+const mobileLinkVariants: Variants = {
+  initial: { x: -30, opacity: 0 },
+  animate: { x: 0, opacity: 1, transition: { type: 'spring', stiffness: 300, damping: 30 } },
+};
+const submenuVariants: Variants = {
+  open: { opacity: 1, height: 'auto', transition: { duration: 0.3, ease: 'easeOut' } },
+  collapsed: { opacity: 0, height: 0, transition: { duration: 0.3, ease: 'easeIn' } },
 };
 
+// --- SUB-COMPONENT for a single accordion item ---
+type MobileAccordionItemProps = { title: string; links: NavLink[]; isOpen: boolean; onToggle: () => void; pathname: string; }
+const MobileAccordionItem = ({ title, links, isOpen, onToggle, pathname }: MobileAccordionItemProps) => (
+  <motion.li variants={mobileLinkVariants}>
+    <button onClick={onToggle} className="w-full flex justify-between items-center text-slate-700">
+      <span>{title.toUpperCase()}</span>
+      <motion.div animate={{ rotate: isOpen ? 180 : 0 }}><ChevronDown size={24} /></motion.div>
+    </button>
+    <AnimatePresence>
+      {isOpen && (
+        <motion.ul variants={submenuVariants} initial="collapsed" animate="open" exit="collapsed" className="pl-4 mt-2 space-y-2 overflow-hidden">
+          {links.map(link => (
+            <li key={link.href}><Link href={link.href} className={`block text-sm ${pathname === link.href ? 'text-blue-600 font-semibold' : 'text-slate-600'}`}>{link.title}</Link></li>
+          ))}
+        </motion.ul>
+      )}
+    </AnimatePresence>
+  </motion.li>
+);
+
+// --- MAIN HEADER COMPONENT ---
 export const Header = () => {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -41,8 +61,10 @@ export const Header = () => {
   }, []);
 
   useEffect(() => {
-    if (isMobileMenuOpen) setIsMobileMenuOpen(false);
+    if (isMobileMenuOpen) { setIsMobileMenuOpen(false); setOpenAccordion(null); }
   }, [pathname]);
+
+  const handleAccordionToggle = (key: string) => { setOpenAccordion(openAccordion === key ? null : key); };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] w-full">
@@ -62,9 +84,17 @@ export const Header = () => {
           </div>
         </div>
       </div>
+
       <nav className={`bg-white shadow-md transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
         <div className="container mx-auto flex justify-between items-center px-4">
-          <Link href="/"><Image src="/ieee-vbit-sb.png" alt="IEEE VBIT SB Logo" width={isScrolled ? 50 : 60} height={isScrolled ? 50 : 60} className="transition-all duration-300" /></Link>
+          <Link href="/">
+  <Image 
+    src="/ieee-vbit-sb.png" 
+    alt="IEEE VBIT SB Logo" 
+    width={60} 
+    height={60}
+    className={`transition-all duration-300 ${isScrolled ? 'w-12 h-12' : 'w-16 h-16'}`} 
+  /></Link>
           
           <ul className="hidden lg:flex items-center space-x-8 text-sm font-bold">
             <li><Link href="/" className={pathname === '/' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}>HOME</Link></li>
@@ -83,50 +113,35 @@ export const Header = () => {
             <li><Link href="/contact" className={pathname === '/contact' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}>CONTACT</Link></li>
             <li><Link href="/sitemap" className={pathname === '/sitemap' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}>SITE MAP</Link></li>
           </ul>
-
-          <div className="lg:hidden">
-            <button onClick={() => setIsMobileMenuOpen(true)} aria-label="Open menu">
-              <Menu size={28} className="text-gray-800" />
-            </button>
-          </div>
+          
+          <div className="lg:hidden"><button onClick={() => setIsMobileMenuOpen(true)} aria-label="Open menu"><Menu size={28} className="text-gray-800" /></button></div>
         </div>
       </nav>
 
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
+            initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="fixed inset-0 bg-gradient-to-br from-blue-600 to-cyan-500 z-[101] p-4 flex flex-col"
+            className="fixed inset-0 bg-white z-[101] p-4 flex flex-col overflow-hidden"
           >
-            <div className="flex justify-between items-center mb-8">
+            <motion.div animate={{ rotate: 360 }} transition={{ duration: 30, repeat: Infinity, ease: 'linear' }} className="absolute -top-40 -left-40 w-96 h-96 bg-blue-400 rounded-full opacity-30 blur-3xl" />
+            <motion.div animate={{ rotate: -360 }} transition={{ duration: 40, repeat: Infinity, ease: 'linear' }} className="absolute -bottom-40 -right-40 w-96 h-96 bg-cyan-400 rounded-full opacity-30 blur-3xl" />
+            <div className="flex justify-between items-center mb-8 relative z-10">
               <Image src="/ieee-vbit-sb.png" alt="IEEE VBIT SB Logo" width={60} height={60} />
-              <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu">
-                <X size={28} className="text-white" />
-              </button>
+              <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu"><X size={28} className="text-slate-700" /></button>
             </div>
             <motion.ul 
-              className="flex flex-col space-y-4 text-lg font-bold"
-              initial="initial"
-              animate="animate"
-              transition={{ staggerChildren: 0.07 }}
+              className="flex flex-col space-y-4 text-lg font-bold relative z-10"
+              initial="initial" animate="animate" transition={{ staggerChildren: 0.07 }}
             >
-              <motion.li variants={mobileLinkVariants}><Link href="/" className="text-white hover:opacity-80">HOME</Link></motion.li>
+              <motion.li variants={mobileLinkVariants}><Link href="/" className="text-slate-800 hover:text-blue-600">HOME</Link></motion.li>
               {Object.entries(navLinks).map(([key, links]) => (
-                <motion.li variants={mobileLinkVariants} key={key}>
-                  <span className="text-blue-200">{key.toUpperCase()}</span>
-                  <ul className="pl-4 mt-2 space-y-2">
-                    {links.map(link => (
-                      <li key={link.href}><Link href={link.href} className={`block text-sm ${pathname === link.href ? 'text-white font-semibold' : 'text-blue-100'}`}>{link.title}</Link></li>
-                    ))}
-                  </ul>
-                </motion.li>
+                <MobileAccordionItem key={key} title={key} links={links} isOpen={openAccordion === key} onToggle={() => handleAccordionToggle(key)} pathname={pathname} />
               ))}
-              <motion.li variants={mobileLinkVariants}><Link href="/achievements" className="text-white hover:opacity-80">ACHIEVEMENTS</Link></motion.li>
-              <motion.li variants={mobileLinkVariants}><Link href="/contact" className="text-white hover:opacity-80">CONTACT</Link></motion.li>
-              <motion.li variants={mobileLinkVariants}><Link href="/sitemap" className="text-white hover:opacity-80">SITE MAP</Link></motion.li>
+              <motion.li variants={mobileLinkVariants}><Link href="/achievements" className="text-slate-800 hover:text-blue-600">ACHIEVEMENTS</Link></motion.li>
+              <motion.li variants={mobileLinkVariants}><Link href="/contact" className="text-slate-800 hover:text-blue-600">CONTACT</Link></motion.li>
+              <motion.li variants={mobileLinkVariants}><Link href="/sitemap" className="text-slate-800 hover:text-blue-600">SITE MAP</Link></motion.li>
             </motion.ul>
           </motion.div>
         )}

@@ -9,7 +9,6 @@ type CtaBannerProps = {
 };
 
 export const CtaBanner = ({ title, buttonText, buttonLink, addSpacing = false }: CtaBannerProps) => {
-  // Conditionally add the padding class if the prop is true
   const spacingClass = addSpacing ? 'py-20' : '';
 
   return (
