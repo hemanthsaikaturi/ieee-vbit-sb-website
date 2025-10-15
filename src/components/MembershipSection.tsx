@@ -34,12 +34,6 @@ export const MembershipSection = () => (
           </div>
         ))}
       </div>
-      {/* --- END OF BANNERS SECTION --- */}
-
-      {/* 
-        This wrapper div adds the necessary spacing both above and below the CTA banner,
-        but only within this specific section.
-      */}
       <div className="py-20">
         <CtaBanner
           title="Explore All Membership Benefits and Opportunities"

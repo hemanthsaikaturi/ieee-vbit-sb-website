@@ -13,8 +13,6 @@ export default function GalleryPage() {
         <h1 className="text-5xl font-bold text-blue-600">Event Gallery</h1>
         <p className="text-gray-600 mt-4 text-xl">A glimpse into our moments of learning and community.</p>
       </div>
-
-      {/* UPDATED: Removed the 'space-y-20' class from this div */}
       <div>
         {galleryData.map((event, index) => (
           <EventCarouselCard 

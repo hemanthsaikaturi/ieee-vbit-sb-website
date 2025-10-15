@@ -28,8 +28,8 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-md text-center">
               <Mail className="w-12 h-12 text-blue-500 mx-auto mb-4" />
-              <p className="text-lg font-semibold text-gray-700">ieeevbitsbdbc@gmail.com</p>
-              <a href="mailto:ieeevbitsbdbc@gmail.com" className="mt-6 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-md hover:bg-blue-500 transition-colors">MAIL US</a>
+              <p className="text-lg font-semibold text-gray-700">ieeevbitsbdoc@gmail.com</p>
+              <a href="mailto:ieeevbitsbdoc@gmail.com" className="mt-6 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-md hover:bg-blue-500 transition-colors">MAIL US</a>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md text-center">
               <MapPin className="w-12 h-12 text-blue-500 mx-auto mb-4" />

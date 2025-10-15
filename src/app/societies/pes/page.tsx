@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { FeatureCard } from '@/components/FeatureCard';
 import { YouTubeEmbed } from '@/components/YouTubeEmbed';
 import { CtaBanner } from '@/components/CtaBanner';
-import { BenefitCard } from '@/components/BenefitCard'; // <-- Import the new component
+import { BenefitCard } from '@/components/BenefitCard';
 import { Target, Lightbulb, Globe, Atom } from 'lucide-react';
 import type { Metadata } from 'next';
 

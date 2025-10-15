@@ -13,9 +13,6 @@ export const TeamSection = ({ title, members }: Team) => {
   const renderLogo = () => {
     if (!logo) return null;
     return (
-      // UPDATED: Added responsive display classes
-      // 'hidden' by default (mobile)
-      // 'lg:flex' on large screens and up (desktop)
       <div key={logo.name} className="hidden lg:flex items-center justify-center p-4 h-full">
         <Image src={logo.imageUrl} alt={logo.name} width={200} height={200} objectFit="contain" />
       </div>

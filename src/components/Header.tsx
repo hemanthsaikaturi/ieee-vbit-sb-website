@@ -50,7 +50,7 @@ export const Header = () => {
         <div className="container mx-auto flex justify-between items-center p-2 text-xs">
           <div className="flex flex-wrap gap-x-4 gap-y-1 items-center">
             <span>📞 +91 90592 23500</span>
-            <span>📧 ieeevbitsbdac@gmail.com</span>
+            <span>📧 ieeevbitsbdoc@gmail.com</span>
           </div>
           <div className="hidden md:flex items-center gap-2 lg:gap-4 text-xs">
             <a href="https://www.ieee.org/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">IEEE.org</a>

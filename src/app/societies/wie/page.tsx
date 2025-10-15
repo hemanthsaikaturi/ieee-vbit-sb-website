@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { FeatureCard } from '@/components/FeatureCard';
 import { CtaBanner } from '@/components/CtaBanner';
-import { Target, Atom } from 'lucide-react'; // Using Atom for Mission icon
+import { Target, Atom } from 'lucide-react';
 import type { Metadata } from 'next';
 
 // Set the metadata for the page title
@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function WiePage() {
-  // Mission content with bullet points, structured as a JSX element
   const missionContent = (
     <div className="text-left space-y-4">
       <p>Our goal is to facilitate the recruitment and retention of women in technical disciplines globally. We envision a vibrant community of IEEE women and men collectively using their diverse talents to innovate for the benefit of humanity.</p>

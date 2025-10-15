@@ -3,7 +3,6 @@ import { AchievementItem } from '@/components/AchievementItem';
 import { achievementsData } from '@/data/achievementsData';
 import { motion } from 'framer-motion';
 
-// Animation variants for the container to create a staggered effect
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {

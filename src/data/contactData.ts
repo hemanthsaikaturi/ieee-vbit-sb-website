@@ -16,7 +16,7 @@ export const contactData: ContactPerson[] = [
   },
   {
     name: 'Shiva Sai Nath Munavathu',
-    role: 'ChairPerson',
+    role: 'Chairperson',
     email: 'mr.shivanayak13@gmail.com',
     imageUrl: '/placeholders/team/25-26/shiva_sai_nath.jpg',
   },

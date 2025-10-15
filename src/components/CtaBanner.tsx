@@ -5,7 +5,7 @@ type CtaBannerProps = {
   title: React.ReactNode;
   buttonText: string;
   buttonLink: string;
-  addSpacing?: boolean; // <-- NEW: Optional prop for spacing
+  addSpacing?: boolean;
 };
 
 export const CtaBanner = ({ title, buttonText, buttonLink, addSpacing = false }: CtaBannerProps) => {
