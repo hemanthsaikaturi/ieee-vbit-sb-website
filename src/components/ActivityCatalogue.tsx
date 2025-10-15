@@ -25,7 +25,7 @@ export const ActivityCatalogue = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 5000, stopOnInteraction: true })]);
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-8">
       <div className="container mx-auto">
         <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Activity Catalogue</h2>

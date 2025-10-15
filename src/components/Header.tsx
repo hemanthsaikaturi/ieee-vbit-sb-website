@@ -6,7 +6,7 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 
-// --- TYPE DEFINITIONS ---
+// --- TYPE DEFINITIONS & DATA ---
 type NavLink = { title: string; href: string; };
 type NavLinks = { [key: string]: NavLink[]; };
 const navLinks: NavLinks = {
@@ -17,6 +17,10 @@ const navLinks: NavLinks = {
 };
 
 // --- ANIMATION VARIANTS ---
+const dropdownVariants: Variants = {
+    hidden: { opacity: 0, y: -10, transition: { duration: 0.2, ease: 'easeOut' } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.2, ease: 'easeIn' } },
+};
 const mobileLinkVariants: Variants = {
   initial: { x: -30, opacity: 0 },
   animate: { x: 0, opacity: 1, transition: { type: 'spring', stiffness: 300, damping: 30 } },
@@ -72,7 +76,7 @@ export const Header = () => {
         <div className="container mx-auto flex justify-between items-center p-2 text-xs">
           <div className="flex flex-wrap gap-x-4 gap-y-1 items-center">
             <span>📞 +91 90592 23500</span>
-            <span>📧 ieeevbitsbdoc@gmail.com</span>
+            <span>📧 ieeevbitsbdac@gmail.com</span>
           </div>
           <div className="hidden md:flex items-center gap-2 lg:gap-4 text-xs">
             <a href="https://www.ieee.org/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">IEEE.org</a>
@@ -84,17 +88,9 @@ export const Header = () => {
           </div>
         </div>
       </div>
-
       <nav className={`bg-white shadow-md transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
         <div className="container mx-auto flex justify-between items-center px-4">
-          <Link href="/">
-  <Image 
-    src="/ieee-vbit-sb.png" 
-    alt="IEEE VBIT SB Logo" 
-    width={60} 
-    height={60}
-    className={`transition-all duration-300 ${isScrolled ? 'w-12 h-12' : 'w-16 h-16'}`} 
-  /></Link>
+          <Link href="/"><Image src="/ieee-vbit-sb.png" alt="IEEE VBIT SB Logo" width={isScrolled ? 50 : 60} height={isScrolled ? 50 : 60} className="transition-all duration-300" /></Link>
           
           <ul className="hidden lg:flex items-center space-x-8 text-sm font-bold">
             <li><Link href="/" className={pathname === '/' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}>HOME</Link></li>
@@ -105,7 +101,13 @@ export const Header = () => {
                   <span className={`cursor-pointer flex items-center gap-1 ${isActive ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600`}>
                     {key.toUpperCase()}<ChevronDown size={16} className={`transition-transform duration-200 ${openMenu === key ? 'rotate-180' : ''}`} />
                   </span>
-                  {openMenu === key && (<ul className="absolute left-0 mt-4 w-56 bg-white shadow-lg rounded-md py-2 border-t-4 border-blue-600">{links.map(link => (<li key={link.href}><Link href={link.href} className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-blue-600 ${pathname === link.href ? 'text-blue-600 font-semibold' : 'text-gray-700'}`}>{link.title}</Link></li>))}</ul>)}
+                  <AnimatePresence>
+                    {openMenu === key && (
+                      <motion.ul variants={dropdownVariants} initial="hidden" animate="visible" exit="hidden" className="absolute left-0 mt-4 w-56 bg-white shadow-lg rounded-md py-2 border-t-4 border-blue-600">
+                        {links.map(link => (<li key={link.href}><Link href={link.href} className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-blue-600 ${pathname === link.href ? 'text-blue-600 font-semibold' : 'text-gray-700'}`}>{link.title}</Link></li>))}
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
                 </li>
               );
             })}

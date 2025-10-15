@@ -13,7 +13,7 @@ export default function Home() {
     <div>
         <ActivityCatalogue />
         <SocietiesSection />
-        <section className="py-16 bg-white">
+        <section className="py-8 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <FeatureCard icon={<Lightbulb size={48} className="text-blue-600" />} title="Mission">{missionText}</FeatureCard>
