@@ -59,7 +59,7 @@ export default function MembershipsPage() {
       <section className="bg-white py-10">
         <div className="container mx-auto text-center px-4">
           <h2 className="text-4xl font-bold text-gray-800 mb-10">Discover the Benefits of IEEE Membership</h2>
-          <YouTubeEmbed videoId="WBCt8MaNafw" title="IEEE Membership... Why We Joined" />
+          <YouTubeEmbed videoId="HrhHdyRXt7I" title="IEEE Membership... Why We Joined" />
         </div>
       </section>
 
