@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AnimateOnScroll } from '@/components/AnimateOnScroll';
+import { FadeIn } from '@/components/FadeIn';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AboutHydSectionPage() {
   return (
     <div className="bg-white">
-      <AnimateOnScroll>
+      <FadeIn>
         <section className="py-10">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -48,7 +48,7 @@ export default function AboutHydSectionPage() {
             </div>
           </div>
         </section>
-      </AnimateOnScroll>
+      </FadeIn>
     </div>
   );
 }

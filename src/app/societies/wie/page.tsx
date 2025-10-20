@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
+import { FadeIn } from '@/components/FadeIn';
 import { FeatureCard } from "@/components/FeatureCard";
 import { CtaBanner } from "@/components/CtaBanner";
 import { Target, Atom } from "lucide-react";
@@ -45,13 +46,11 @@ export default function WiePage() {
       </p>
     </div>
   );
-
-  const visionText =
-    "WIE - AG, IEEE - VBIT SB, envisions a vibrant community of women innovators for the world of tomorrow. It not only promotes women but also supports them in their academic and professional careers. It is associated with worldwide, multidisciplinary community of engineers, scientists and educators. It throws light on how women are making a lasting impact on the field of Engineering. The student branch was addressed by Madhavi Latha (WIE chair 2009) and Dr.Shailaja from IICT and Dr.  Kanaka Durga (2010).Speakers shared their view on the role of woman as an engineer with the student branch members and motivated them on the same.";
+  const visionText = "WIE - AG, IEEE - VBIT SB, envisions a vibrant community of women innovators for the world of tomorrow. It not only promotes women but also supports them in their academic and professional careers. It is associated with worldwide, multidisciplinary community of engineers, scientists and educators. It throws light on how women are making a lasting impact on the field of Engineering. The student branch was addressed by Madhavi Latha (WIE chair 2009) and Dr.Shailaja from IICT and Dr.  Kanaka Durga (2010).Speakers shared their view on the role of woman as an engineer with the student branch members and motivated them on the same.";
   
   return (
     <div>
-      <AnimateOnScroll>
+      <FadeIn>
         <section className="bg-white py-5">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -77,8 +76,7 @@ export default function WiePage() {
             </div>
           </div>
         </section>
-      </AnimateOnScroll>
-
+      </FadeIn>
       <AnimateOnScroll>
         <section className="bg-slate-50 py-10">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16">
@@ -99,7 +97,6 @@ export default function WiePage() {
           </div>
         </section>
       </AnimateOnScroll>
-
       <AnimateOnScroll>
         <CtaBanner
           title={

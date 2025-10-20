@@ -3,6 +3,7 @@ import { contactData } from '@/data/contactData';
 import { Mail, MapPin, Send } from 'lucide-react';
 import type { Metadata } from 'next';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
+import { FadeIn } from '@/components/FadeIn';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -11,16 +12,12 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div>
-      <AnimateOnScroll>
+      <FadeIn>
         <section className="bg-gradient-to-r from-cyan-500 to-blue-600 py-10">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold text-white">Contact Us</h1>
             </div>
-            {/*
-              UPDATED: Changed 'md:grid-cols-3' to 'lg:grid-cols-3'.
-              This keeps the single-column layout for tablets.
-            */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {contactData.map((person) => (
                 <ContactPersonCard key={person.name} {...person} />
@@ -28,9 +25,8 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
-      </AnimateOnScroll>
+      </FadeIn>
 
-      {/* ... (The rest of the page is unchanged) ... */}
       <AnimateOnScroll>
         <section className="py-20 pattern-background-light">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16">
@@ -38,8 +34,8 @@ export default function ContactPage() {
               <div className="bg-white p-8 rounded-lg shadow-md text-center relative overflow-hidden transition-shadow duration-300 hover:shadow-lg">
                 <div className="absolute top-0 left-0 w-full h-1.5 bg-blue-500"></div>
                 <Mail className="w-12 h-12 text-blue-500 mx-auto mb-4" />
-                <p className="text-lg font-semibold text-gray-700">ieeevbitsbdbc@gmail.com</p>
-                <a href="mailto:ieeevbitsbdbc@gmail.com" className="mt-6 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-md hover:bg-blue-500 transition-colors">MAIL US</a>
+                <p className="text-lg font-semibold text-gray-700">ieeevbitsbdoc@gmail.com</p>
+                <a href="mailto:ieeevbitsbdoc@gmail.com" className="mt-6 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-md hover:bg-blue-500 transition-colors">MAIL US</a>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md text-center relative overflow-hidden transition-shadow duration-300 hover:shadow-lg">
                 <div className="absolute top-0 left-0 w-full h-1.5 bg-blue-500"></div>
@@ -51,6 +47,7 @@ export default function ContactPage() {
           </div>
         </section>
       </AnimateOnScroll>
+
       <AnimateOnScroll>
         <section className="relative bg-gradient-to-b from-blue-50 to-white py-20 overflow-hidden">
           <div className="absolute top-0 left-0 w-64 h-64 bg-blue-200 rounded-full opacity-30 -translate-x-16 -translate-y-16"></div>
@@ -73,6 +70,7 @@ export default function ContactPage() {
           </div>
         </section>
       </AnimateOnScroll>
+
       <AnimateOnScroll>
         <section className="bg-gray-900 py-20">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16">

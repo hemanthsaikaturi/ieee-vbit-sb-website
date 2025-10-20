@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
+import { FadeIn } from '@/components/FadeIn';
 import { FeatureCard } from "@/components/FeatureCard";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { CtaBanner } from "@/components/CtaBanner";
@@ -15,7 +16,7 @@ export default function ComputerSocietyPage() {
 
   return (
     <div>
-      <AnimateOnScroll>
+      <FadeIn>
         <section className="bg-white py-10">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -62,7 +63,7 @@ export default function ComputerSocietyPage() {
             </div>
           </div>
         </section>
-      </AnimateOnScroll>
+      </FadeIn>
       <AnimateOnScroll>
         <section className="bg-slate-50 py-10">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-2xl">
@@ -103,4 +104,4 @@ export default function ComputerSocietyPage() {
       </AnimateOnScroll>
     </div>
   );
-}
+} 

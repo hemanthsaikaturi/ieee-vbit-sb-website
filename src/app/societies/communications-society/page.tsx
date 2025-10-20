@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
+import { FadeIn } from '@/components/FadeIn';
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { CtaBanner } from "@/components/CtaBanner";
 import { CheckCircle2 } from "lucide-react";
@@ -15,7 +16,7 @@ const ObjectiveItem = ({ text }: { text: string }) => ( <div className="flex ite
 export default function CommunicationsSocietyPage() {
   return (
     <div>
-      <AnimateOnScroll>
+      <FadeIn>
         <section className="bg-white py-10">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -65,7 +66,7 @@ export default function CommunicationsSocietyPage() {
             </div>
           </div>
         </section>
-      </AnimateOnScroll>
+      </FadeIn>
       <AnimateOnScroll>
         <section className="bg-blue-500 py-10">
           <div className="container mx-auto text-center px-8 sm:px-12 lg:px-16">

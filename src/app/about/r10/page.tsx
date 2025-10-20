@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
+import { FadeIn } from '@/components/FadeIn';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,13 +10,11 @@ export const metadata: Metadata = {
 export default function AboutR10Page() {
   return (
     <div className="bg-white">
-      <AnimateOnScroll>
+      <FadeIn>
         <section className="py-10">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
-                IEEE R10
-              </h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">IEEE R10</h1>
               <div className="w-24 h-1.5 bg-blue-600 mb-8"></div>
               <p className="text-gray-700 leading-relaxed text-justify">
                 The IEEE Region 10, also referred as the Asia Pacific Region,
@@ -27,27 +26,17 @@ export default function AboutR10Page() {
                 one of the largest regions in IEEE. For more info, visit the
                 website.
               </p>
-              <a
-                href="https://www.ieeer10.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-md text-base hover:bg-blue-500 transition-all duration-300 mt-8"
-              >
+              <a href="https://www.ieeer10.org/" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-md text-base hover:bg-blue-500 transition-all duration-300 mt-8">
                 Visit the Website
               </a>
             </div>
             <div className="flex justify-center md:justify-end">
-              <Image
-                src="/placeholders/ieee_region10_logo.png"
-                alt="IEEE Region 10 Logo"
-                width={500}
-                height={300}
-                objectFit="contain"
-              />
+              <Image src="/placeholders/ieee_region10_logo.png" alt="IEEE Region 10 Logo" width={500} height={300} objectFit="contain" />
             </div>
           </div>
         </section>
-      </AnimateOnScroll>
+      </FadeIn>
+
       <AnimateOnScroll>
         <section className="py-5 border-t border-gray-100">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-4xl">
@@ -67,6 +56,7 @@ export default function AboutR10Page() {
           </div>
         </section>
       </AnimateOnScroll>
+
       <AnimateOnScroll>
         <section className="py-5 border-t border-gray-100">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-4xl">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
+import { FadeIn } from '@/components/FadeIn';
 import { AnimatedStat } from "@/components/AnimatedStat";
 import { CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
@@ -29,7 +30,7 @@ const ObjectiveItem = ({ text }: { text: string }) => (
 export default function AboutVbitSbPage() {
   return (
     <div>
-      <AnimateOnScroll>
+      <FadeIn>
         <section className="bg-white py-10">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -80,7 +81,7 @@ export default function AboutVbitSbPage() {
             </div>
           </div>
         </section>
-      </AnimateOnScroll>
+      </FadeIn>
       <AnimateOnScroll>
         <section className="bg-cyan-600 py-20">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16">

@@ -22,16 +22,16 @@ html {
 .embla { overflow: hidden; }
 .embla__container { display: flex; }
 
-/* --- Carousel Slide Styles --- */
+/* --- Carousel Slide Styles (Specific to each component) --- */
 
-/* For the Memberships Page Carousel */
+/* 1. Memberships Page Carousel */
 .embla__slide_membership {
   flex: 0 0 100%;
   min-width: 0;
   aspect-ratio: 1 / 1;
 }
 
-/* For the Homepage Activity Catalogue */
+/* 2. Homepage Activity Catalogue (Mobile & Tablet) */
 .embla__slide_activity {
   flex: 0 0 90%; 
   min-width: 0;
@@ -44,7 +44,7 @@ html {
   .embla__slide_activity { flex: 0 0 30%; }
 }
 
-/* For the Event Gallery Page */
+/* Event Gallery Page Carousels */
 .embla__slide_event_card_final {
   flex: 0 0 100%;
   min-width: 0;

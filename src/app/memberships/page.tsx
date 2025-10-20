@@ -3,6 +3,7 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
+import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Memberships",
@@ -22,9 +23,9 @@ const resourceLinks = [
 export default function MembershipsPage() {
   return (
     <div>
-      <AnimateOnScroll>
+      <FadeIn>
         <section className="bg-blue-600 text-white py-10">
-          <div className="container mx-auto px-6 sm:px-8 max-w-4xl">
+          <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Memberships</h1>
             <p className="text-lg text-blue-100 leading-relaxed text-justify">
               IEEE membership offers access to technical innovation, cutting-edge
@@ -35,11 +36,11 @@ export default function MembershipsPage() {
             </p>
           </div>
         </section>
-      </AnimateOnScroll>
+      </FadeIn>
 
       <AnimateOnScroll>
         <section className="py-10 pattern-background-light">
-          <div className="container mx-auto px-6 sm:px-8 grid md:grid-cols-2 gap-12 items-center">
+          <div className="container mx-auto px-8 sm:px-12 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-10">
               <div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-2">
@@ -80,7 +81,7 @@ export default function MembershipsPage() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center md:text-left">
                 Benefits at a Glance
               </h2>
-              <div className="max-w-[600px] mx-auto">
+              <div className="max-w-3xl mx-auto">
                 <ImageCarousel slides={carouselImages} />
               </div>
             </div>
@@ -90,7 +91,7 @@ export default function MembershipsPage() {
 
       <AnimateOnScroll>
         <section className="bg-white py-10">
-          <div className="container mx-auto text-center px-6 sm:px-8">
+          <div className="container mx-auto text-center px-8 sm:px-12 lg:px-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-10">
               Discover the Benefits of IEEE Membership
             </h2>
@@ -104,7 +105,7 @@ export default function MembershipsPage() {
 
       <AnimateOnScroll>
         <section className="bg-white pb-10">
-          <div className="container mx-auto px-6 sm:px-8">
+          <div className="container mx-auto px-8 sm:px-12 lg:px-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {resourceLinks.map((link) => (
                 <div

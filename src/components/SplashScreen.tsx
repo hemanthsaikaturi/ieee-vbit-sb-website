@@ -11,11 +11,10 @@ export const SplashScreen = () => {
       setIsLoading(false);
       return;
     }
-
     const timer = setTimeout(() => {
       setIsLoading(false);
       sessionStorage.setItem('hasLoadedOnce', 'true');
-    }, 1500);
+    }, 1500); 
 
     return () => clearTimeout(timer);
   }, []);
