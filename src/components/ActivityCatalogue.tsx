@@ -8,7 +8,6 @@ import { activities, Activity } from '@/data/activityCatalogueData';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
-// The Modal component with the fast, fluid animation
 const ActivityModal = ({ activity, onClose }: { activity: Activity; onClose: () => void; }) => (
     <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex justify-center items-center z-[110] p-4">
       <motion.div
@@ -44,8 +43,6 @@ export const ActivityCatalogue = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Activity Catalogue</h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
-
-        {/* --- Carousel for Mobile and Tablet (with performance fixes) --- */}
         <div className="lg:hidden embla -mx-2" ref={emblaRef}>
           <div className="embla__container">
             {activities.map((activity) => (
@@ -57,7 +54,6 @@ export const ActivityCatalogue = () => {
                       alt={activity.title} 
                       fill 
                       className="object-contain"
-                      // PERFORMANCE FIX: Added the 'sizes' prop
                       sizes="(max-width: 768px) 90vw, 40vw"
                     />
                   </div>
@@ -70,8 +66,6 @@ export const ActivityCatalogue = () => {
             ))}
           </div>
         </div>
-
-        {/* --- Grid for Desktop (with performance fixes) --- */}
         <div className="hidden lg:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-4">
           {activities.map((activity) => (
             <div key={activity.title} onClick={() => setSelectedActivity(activity)} className="cursor-pointer group">
@@ -82,7 +76,6 @@ export const ActivityCatalogue = () => {
                   width={300} 
                   height={420}
                   className="object-cover w-full h-full"
-                  // PERFORMANCE FIX: Added the 'sizes' prop
                   sizes="20vw"
                 />
               </div>

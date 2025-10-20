@@ -6,16 +6,15 @@ import { useEffect, ReactNode } from 'react';
 
 // The animation variants
 const variants: Variants = {
-  hidden: { opacity: 0, y: 50 }, // Starts a bit further down for a more noticeable effect
+  hidden: { opacity: 0, y: 50 }, 
   visible: { 
     opacity: 1, 
     y: 0,
-    // THIS IS THE KEY CHANGE: We are now using a 'spring' animation
     transition: { 
       type: 'spring',
-      stiffness: 100, // How "stiff" the spring is. Lower is softer.
-      damping: 20,    // How much resistance. Higher is less bouncy.
-      mass: 0.8,      // The "weight" of the object.
+      stiffness: 100,
+      damping: 20,
+      mass: 0.8, 
     },
   },
 };

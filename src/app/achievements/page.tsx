@@ -1,9 +1,9 @@
 'use client'; 
-import { useEffect } from 'react'; // <-- Make sure to import this
+import { useEffect } from 'react';
 import { AchievementItem } from '@/components/AchievementItem';
 import { achievementsData } from '@/data/achievementsData';
 import { motion } from 'framer-motion';
-import { AnimateOnScroll } from '@/components/AnimateOnScroll'; // Use AnimateOnScroll for consistency
+import { AnimateOnScroll } from '@/components/AnimateOnScroll';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -16,7 +16,6 @@ const containerVariants = {
 };
 
 export default function AchievementsPage() {
-  // This is the correct way to set the title in a Client Component
   useEffect(() => {
     document.title = 'Awards & Recognition | IEEE - VBIT SB';
   }, []);
