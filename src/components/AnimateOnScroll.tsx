@@ -6,15 +6,16 @@ import { useEffect, ReactNode } from 'react';
 
 // The animation variants
 const variants: Variants = {
-  hidden: { opacity: 0, y: 50 }, 
+  hidden: { opacity: 0, y: 50 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: { 
       type: 'spring',
       stiffness: 100,
-      damping: 20,
-      mass: 0.8, 
+      damping: 20,    
+      mass: 0.8,
+      delay: 0.1,
     },
   },
 };
