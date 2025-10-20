@@ -28,7 +28,6 @@ export const AchievementItem = ({ year, title, description, imageUrl }: Achievem
                 />
               </div>
             </div>
-
             <div className="md:col-span-2 md:pl-6">
               <h2 className="text-4xl md:text-5xl font-bold text-blue-500 mb-2">{year}</h2>
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800">{title}</h3>

@@ -15,7 +15,6 @@ const containerVariants = {
     },
   },
 };
-
 export default function AchievementsPage() {
   return (
     <div className="bg-white py-10">
