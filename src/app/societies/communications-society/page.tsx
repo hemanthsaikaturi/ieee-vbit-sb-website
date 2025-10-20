@@ -17,44 +17,91 @@ export default function CommunicationsSocietyPage() {
     <div>
       <AnimateOnScroll>
         <section className="bg-white py-10">
-          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+          <div className="container mx-auto px-8 sm:px-12 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4"> Communications Society </h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
+                Communications Society
+              </h1>
               <div className="w-24 h-1.5 bg-blue-600 mb-8"></div>
               <div className="space-y-4 text-gray-700 leading-relaxed text-justify">
-                <p> Communications society was established in 1952. With the formation of IRE’s (the Institute of Radio Engineers) Professional Group on Communications Systems (PGCS), Communications Society under IEEE has evolved into a diversified group of global industry professionals with a common objective in advancing all communications technologies. </p>
-                <p> Communications Society (ComSoc) under IEEE - VBIT SB was, initiated in the year 2012. The main motto of establishing Communications Society under IEEE - VBIT SB was to make a developing engineer understand the seamless connection between Electronics and Communication. It also aims in improvisation of innovative thinking of a student regarding practical working and diverse applications in the practical world. </p>
-                <p> Communications Society under IEEE - VBIT SB, aims to prepare an engineer in all possible ways to make him/her field ready. In the previous years, Communications Society under IEEE - VBIT SB has organized few events that were not only knowledgeable but were also fruitful to the engineers of VBIT and to the students of many other colleges. With a good membership base of around 20 members, including the Executive Committee and the volunteers, ComSoc IEEE - VBIT SB, has made a profound impact on many engineers over the years with unique and innovative events. </p>
+                <p>
+                  Communications society was established in 1952. With the
+                  formation of IRE’s (the Institute of Radio Engineers)
+                  Professional Group on Communications Systems (PGCS),
+                  Communications Society under IEEE has evolved into a diversified
+                  group of global industry professionals with a common objective
+                  in advancing all communications technologies.
+                </p>
+                <p>
+                  Communications Society (ComSoc) under IEEE - VBIT SB was,
+                  initiated in the year 2012. The main motto of establishing
+                  Communications Society under IEEE - VBIT SB was to make a
+                  developing engineer understand the seamless connection between
+                  Electronics and Communication. It also aims in improvisation of
+                  innovative thinking of a student regarding practical working and
+                  diverse applications in the practical world.
+                </p>
+                <p>
+                  Communications Society under IEEE - VBIT SB, aims to prepare an
+                  engineer in all possible ways to make him/her field ready. In
+                  the previous years, Communications Society under IEEE - VBIT SB
+                  has organized few events that were not only knowledgeable but
+                  were also fruitful to the engineers of VBIT and to the students
+                  of many other colleges. With a good membership base of around 20
+                  members, including the Executive Committee and the volunteers,
+                  ComSoc IEEE - VBIT SB, has made a profound impact on many
+                  engineers over the years with unique and innovative events.
+                </p>
               </div>
             </div>
             <div className="flex justify-center md:justify-end">
-              <Image src="/placeholders/comsoc_logo.png" alt="IEEE Communications Society Logo" width={500} height={200} objectFit="contain" />
+              <Image
+                src="/placeholders/comsoc_logo.png"
+                alt="IEEE Communications Society Logo"
+                width={500}
+                height={200}
+                objectFit="contain"
+              />
             </div>
           </div>
         </section>
       </AnimateOnScroll>
-
       <AnimateOnScroll>
         <section className="bg-blue-500 py-10">
-          <div className="container mx-auto text-center px-4">
-            <h2 className="text-4xl font-bold text-white mb-10"> What People say about ComSoc! </h2>
-            <YouTubeEmbed videoId="9XbGqrVefJk" title="What members say about IEEE Communications Society" />
+          <div className="container mx-auto text-center px-8 sm:px-12 lg:px-16">
+            <h2 className="text-4xl font-bold text-white mb-10">
+              What People say about ComSoc!
+            </h2>
+            <YouTubeEmbed
+              videoId="9XbGqrVefJk"
+              title="What members say about IEEE Communications Society"
+            />
           </div>
         </section>
       </AnimateOnScroll>
-
       <AnimateOnScroll>
         <section className="bg-blue-500 pb-10">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-8 sm:px-12 lg:px-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-5xl mx-auto">
-              {objectives.map((item) => (<ObjectiveItem key={item} text={item} />))}
+              {objectives.map((item) => (
+                <ObjectiveItem key={item} text={item} />
+              ))}
             </div>
           </div>
         </section>
       </AnimateOnScroll>
-
       <AnimateOnScroll>
-        <CtaBanner title={<> Get Your Communications Society <br /> Membership Now To Avail Exciting Benefits </>} buttonText="JOIN COMSOC TODAY" buttonLink="https://www.comsoc.org/membership" addSpacing={true} />
+        <CtaBanner
+          title={
+            <>
+              Get Your Communications Society <br /> Membership Now To Avail
+              Exciting Benefits
+            </>
+          }
+          buttonText="JOIN COMSOC TODAY"
+          buttonLink="https://www.comsoc.org/membership"
+          addSpacing={true}
+        />
       </AnimateOnScroll>
     </div>
   );

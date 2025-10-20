@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
-import { SiWhatsapp } from 'react-icons/si'; // Importing a brand-accurate WhatsApp icon
+import { SiWhatsapp } from 'react-icons/si';
 
 export const Footer = () => {
   return (
@@ -26,7 +26,7 @@ export const Footer = () => {
           </a>
         </div>
 
-        <p className="text-sm text-gray-400 mb-4">Designed and Developed by Web Designer | IEEE - VBIT SB</p>
+        <p className="text-sm text-gray-400 mb-4">Designed and Developed by Web Designers | IEEE - VBIT SB</p>
         
         <div className="max-w-4xl mx-auto text-xs text-gray-500 space-y-2">
             <p>© Copyright 2025 IEEE – All rights reserved.</p>

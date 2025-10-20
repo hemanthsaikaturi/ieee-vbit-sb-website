@@ -22,16 +22,16 @@ html {
 .embla { overflow: hidden; }
 .embla__container { display: flex; }
 
-/* --- Carousel Slide Styles (Specific to each component) --- */
+/* --- Carousel Slide Styles --- */
 
-/*Memberships Page Carousel */
-.embla__slide {
+/* For the Memberships Page Carousel */
+.embla__slide_membership {
   flex: 0 0 100%;
   min-width: 0;
-  height: 450px;
+  aspect-ratio: 1 / 1;
 }
 
-/*Homepage Activity Catalogue (Mobile & Tablet) */
+/* For the Homepage Activity Catalogue */
 .embla__slide_activity {
   flex: 0 0 90%; 
   min-width: 0;
@@ -43,9 +43,9 @@ html {
 @media (min-width: 1024px) {
   .embla__slide_activity { flex: 0 0 30%; }
 }
-/*Event Gallery Page */
+
+/* For the Event Gallery Page */
 .embla__slide_event_card_final {
   flex: 0 0 100%;
   min-width: 0;
-  padding: 0 0.5rem;
 }
