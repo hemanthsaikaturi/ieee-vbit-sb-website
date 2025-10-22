@@ -3,19 +3,15 @@
 import { motion, useAnimation, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, ReactNode } from 'react';
-
-// The animation variants
 const variants: Variants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 75 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: { 
       type: 'spring',
-      stiffness: 100,
-      damping: 20,    
-      mass: 0.8,
-      delay: 0.1,
+      stiffness: 250, 
+      damping: 30,
     },
   },
 };
