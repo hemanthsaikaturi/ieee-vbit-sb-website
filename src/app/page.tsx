@@ -3,7 +3,6 @@ import { SocietiesSection } from "@/components/SocietiesSection";
 import { FeatureCard } from "@/components/FeatureCard";
 import { GrantsSection } from "@/components/GrantsSection";
 import { MembershipSection } from "@/components/MembershipSection";
-import { CtaBanner } from "@/components/CtaBanner";
 import { Lightbulb, Target } from "lucide-react";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 import { FadeIn } from "@/components/FadeIn";
@@ -14,14 +13,10 @@ export default function Home() {
 
   return (
     <div>
-      {/* 
-        The first section gets a simple, stable fade-in to prevent page jump and stutter.
-      */}
       <FadeIn>
         <ActivityCatalogue />
       </FadeIn>
       
-      {/* All subsequent sections keep the fluid scroll animation. */}
       <AnimateOnScroll>
         <SocietiesSection />
       </AnimateOnScroll>
