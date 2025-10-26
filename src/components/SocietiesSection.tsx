@@ -69,7 +69,7 @@ export const SocietiesSection = () => {
             >
               <Link href={society.link} className="block group">
                 <motion.div 
-                  className="bg-white rounded-full h-40 w-40 md:h-48 md:w-48 flex justify-center items-center shadow-2xl p-4 relative"
+                  className="bg-white rounded-full h-36 w-36 md:h-40 md:w-40 lg:h-48 lg:w-48 flex justify-center items-center shadow-2xl p-4 relative"
                   initial="initial"
                   whileHover="hover"
                 >
