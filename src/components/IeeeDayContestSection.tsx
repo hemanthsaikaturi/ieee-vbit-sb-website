@@ -32,7 +32,7 @@ export const IeeeDayContestSection = () => {
           >
             <Image src="/contest/ieee-day-logo.png" alt="IEEE Day 2025 Logo" width={180} height={90} className="mx-auto mb-4" />
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text">
-              Vote for IEEE VBIT SB!
+              Vote for IEEE - VBIT SB!
             </h2>
           </motion.div>
 
