@@ -14,13 +14,9 @@ export const IeeeDayContestSection = () => {
 
   return (
     <>
-      {/* ---- THIS IS THE CORRECTED LINE ---- */}
-      <section className="relative bg-slate-50 text-slate-800 pt-12 pb-20 overflow-hidden">
-        {/* Background Gradient and Noise */}
-        <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-cyan-100 opacity-80"></div>
-            <div className="absolute inset-0 bg-noise opacity-30"></div>
-        </div>
+      <section className="relative bg-slate-100 text-slate-800 pt-12 pb-20 overflow-hidden">
+        {/* Background remains the same */}
+        <div className="absolute inset-0 bg-noise opacity-10"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           {/* Header */}
@@ -36,8 +32,8 @@ export const IeeeDayContestSection = () => {
             </h2>
           </motion.div>
 
-          {/* Main Layout Container */}
-          <div className="flex flex-col lg:flex-row items-center gap-x-12 gap-y-10">
+          {/* Stable Side-by-Side Layout */}
+          <div className="flex flex-col lg:flex-row items-center gap-x-16 gap-y-10">
 
             {/* Left Column: Video Player */}
             <motion.div
@@ -69,23 +65,22 @@ export const IeeeDayContestSection = () => {
                 Your valuable vote can help us bring global recognition to VBIT and honor our unwavering spirit of innovation and excellence.
               </p>
 
-              {/* Countdown Timer Card */}
-              <div className="bg-white/90 border border-slate-200 rounded-xl p-6 shadow-xl">
+              {/* ---- UPDATED "FROSTED GLASS" CARD STYLES BELOW ---- */}
+              <div className="bg-white/80 backdrop-blur-lg border border-gray-200 rounded-xl p-6 shadow-lg">
                 <h3 className="text-center text-xl font-semibold mb-4 text-slate-700">Voting Ends In:</h3>
                 <CountdownTimer targetDate={deadline} />
               </div>
 
-              {/* Voting Button Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="bg-blue-50 border border-slate-200 rounded-xl p-6 text-center">
-                  <Camera size={40} className="mx-auto mb-4 text-blue-500"/>
+                <div className="bg-gradient-to-br from-blue-50/80 to-white/60 backdrop-blur-lg border border-gray-200 rounded-xl p-6 text-center shadow-lg">
+                  <Camera size={40} className="mx-auto mb-4 text-blue-600"/>
                   <h4 className="text-xl font-bold mb-4">Photo Entry</h4>
                   <Link href="https://m.cmpgn.page/4zmKfh?sre=Qpr8nvFBKvp92Fk" target="_blank" rel="noopener noreferrer" className="block w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-md hover:bg-blue-500 transition-transform transform hover:scale-105">
                     Vote Here
                   </Link>
                 </div>
-                <div className="bg-green-50 border border-slate-200 rounded-xl p-6 text-center">
-                  <Video size={40} className="mx-auto mb-4 text-green-500"/>
+                <div className="bg-gradient-to-br from-green-50/80 to-white/60 backdrop-blur-lg border border-gray-200 rounded-xl p-6 text-center shadow-lg">
+                  <Video size={40} className="mx-auto mb-4 text-green-600"/>
                   <h4 className="text-xl font-bold mb-4">Video Entry</h4>
                   <Link href="https://m.cmpgn.page/CkdHG2?sre=ZBx9P5CPwlmGKsy" target="_blank" rel="noopener noreferrer" className="block w-full bg-green-600 text-white font-bold py-3 px-6 rounded-md hover:bg-green-500 transition-transform transform hover:scale-105">
                     Vote Here
@@ -93,10 +88,9 @@ export const IeeeDayContestSection = () => {
                 </div>
               </div>
 
-              {/* "How to Vote" Button */}
               <button 
                 onClick={() => setIsModalOpen(true)}
-                className="flex items-center justify-center gap-2 w-full text-center py-3 px-6 bg-white border border-slate-200 rounded-xl shadow-lg text-slate-600 hover:border-slate-400 hover:text-slate-800 transition-all duration-300"
+                className="flex items-center justify-center gap-2 w-full text-center py-3 px-6 bg-white/80 backdrop-blur-lg border border-gray-200 rounded-xl shadow-lg text-slate-600 hover:border-gray-400 hover:text-slate-800 transition-all duration-300"
               >
                 <HelpCircle size={20} /> How to vote? See the process.
               </button>
