@@ -66,8 +66,7 @@ export const VotingContestSection = () => {
             <div>
               <h2 className="text-3xl font-bold mb-4 text-cyan-300">Vote for IEEE VBIT SB!</h2>
               <p className="mb-4 text-gray-300">
-                <b>IEEE - VBIT SB</b>, proudly represents Vignana Bharathi Institute of Technology (VBIT) in the <b>IEEE Day 2025 Global Photo and Video Contest</b>, standing among a distinguished few branches worldwide.
-              </p>
+                The <b>IEEE - VBIT SB</b>,The IEEE - VBIT SB proudly represents Vignana Bharathi Institute of Technology (VBIT) in the <b>IEEE Day 2025 Global Photo and Video Contest, </b>standing among a select group of esteemed communities worldwide.</p>
               <p className="mb-6 text-gray-300">
                 Your valuable vote can help us bring global recognition to VBIT and honor our unwavering spirit of innovation and excellence.
               </p>
