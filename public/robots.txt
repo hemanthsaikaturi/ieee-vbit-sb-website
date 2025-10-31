@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.ieeevbitsb.in
+
+# Sitemaps
+Sitemap: https://www.ieeevbitsb.in/sitemap.xml
