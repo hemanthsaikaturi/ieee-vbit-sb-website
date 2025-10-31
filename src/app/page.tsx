@@ -3,12 +3,9 @@ import { SocietiesSection } from "@/components/SocietiesSection";
 import { FeatureCard } from "@/components/FeatureCard";
 import { GrantsSection } from "@/components/GrantsSection";
 import { MembershipSection } from "@/components/MembershipSection";
-import { CtaBanner } from "@/components/CtaBanner";
 import { Lightbulb, Target } from "lucide-react";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 import { FadeIn } from "@/components/FadeIn";
-// ---- NEW IMPORT ----
-import { IeeeDayContestSection } from "@/components/IeeeDayContestSection";
 
 
 export default function Home() {
@@ -17,8 +14,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* ---- ADD THE NEW CONTEST SECTION HERE ---- */}
-      <IeeeDayContestSection />
 
       <FadeIn>
         <ActivityCatalogue />
