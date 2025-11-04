@@ -3,7 +3,6 @@ import "./globals.css";
 import Favicon from './favicon.png';
 import { ClientLayoutWrapper } from "@/components/ClientLayoutWrapper";
 
-// The metadata object will now work perfectly.
 export const metadata: Metadata = {
   title: {
     default: 'IEEE - VBIT SB | Advancing Technology for Humanity',
