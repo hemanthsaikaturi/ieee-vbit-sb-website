@@ -24,6 +24,6 @@ export const contactData: ContactPerson[] = [
     name: 'Sai Deekshith Badam',
     role: 'GINI | MDO',
     email: 'badamdeekshith@gmail.com',
-    imageUrl: '/placeholders/Contact/sai_deekshith.jpg',
+    imageUrl: '/placeholders/Contact/sai_deekshith.png',
   },
 ];

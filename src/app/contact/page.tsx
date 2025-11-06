@@ -4,19 +4,17 @@ import { Mail, MapPin, Send } from 'lucide-react';
 import type { Metadata } from 'next';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
 import { FadeIn } from '@/components/FadeIn';
-import { LazyMap } from '@/components/LazyMap'; 
 
 export const metadata: Metadata = {
   title: 'Contact',
 };
 
 export default function ContactPage() {
-  const mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.7743792694455!2d78.7196795756745!3d17.470509692224454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb76ea23dfa8d5%3A0x72d3ea7f454e19ea!2sVignana%20Bharathi%20Institute%20of%20Technology%20(VBIT)%20%7C%20Top%20Engineering%20Colleges%20In%20Telangana!5e0!3m2!1sen!2sin!4v1760363263481!5m2!1sen!2sin";
   return (
     <div>
       <FadeIn>
         <section className="bg-gradient-to-r from-cyan-500 to-blue-600 py-10">
-          <div className="container mx-auto px-8 sm-px-12 lg:px-16">
+          <div className="container mx-auto px-8 sm:px-12 lg:px-16">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold text-white">Contact Us</h1>
             </div>
@@ -80,7 +78,9 @@ export default function ContactPage() {
               <h2 className="text-4xl font-bold text-white">Our Location</h2>
             </div>
             <div className="max-w-6xl mx-auto rounded-lg overflow-hidden shadow-lg">
-              <LazyMap src={mapSrc} />
+              <div className="w-full h-[450px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.7743792694455!2d78.7196795756745!3d17.470509692224454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb76ea23dfa8d5%3A0x72d3ea7f454e19ea!2sVignana%20Bharathi%20Institute%20of%20Technology%20(VBIT)%20%7C%20Top%20Engineering%20Colleges%20In%20Telangana!5e0!3m2!1sen!2sin!4v1760363263481!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+              </div>
             </div>
           </div>
         </section>
