@@ -45,7 +45,7 @@ export const ActivityCatalogue = () => {
         </div>
         <div className="lg:hidden embla -mx-2" ref={emblaRef}>
           <div className="embla__container">
-            {activities.map((activity) => (
+            {activities.map((activity, index) => (
               <div className="embla__slide_activity" key={activity.title}>
                 <div className="bg-white rounded-lg shadow-md border h-full flex flex-col overflow-hidden">
                   <div className="relative w-full h-64 bg-slate-100 p-4">
@@ -55,6 +55,8 @@ export const ActivityCatalogue = () => {
                       fill 
                       className="object-contain"
                       sizes="(max-width: 768px) 90vw, 40vw"
+                      // Prioritize the first image in the mobile carousel
+                      priority={index === 0}
                     />
                   </div>
                   <div className="p-6 text-left flex-grow flex flex-col">
@@ -67,7 +69,7 @@ export const ActivityCatalogue = () => {
           </div>
         </div>
         <div className="hidden lg:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-4">
-          {activities.map((activity) => (
+          {activities.map((activity, index) => (
             <div key={activity.title} onClick={() => setSelectedActivity(activity)} className="cursor-pointer group">
               <div className="w-full max-w-[220px] mx-auto border bg-gray-100 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1">
                 <Image 
@@ -77,6 +79,7 @@ export const ActivityCatalogue = () => {
                   height={420}
                   className="object-cover w-full h-full"
                   sizes="20vw"
+                  priority={index === 0}
                 />
               </div>
               <p className="mt-4 font-semibold text-gray-800 group-hover:text-blue-600 text-sm text-center">{activity.title}</p>
