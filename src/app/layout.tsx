@@ -5,6 +5,8 @@ import Favicon from './favicon.png';
 import { ClientLayoutWrapper } from "@/components/ClientLayoutWrapper";
 
 const inter = Inter({ subsets: ['latin'] });
+
+// Definitive metadata for SEO and Social Sharing
 export const metadata: Metadata = {
   metadataBase: new URL('https://ieeevbitsb.in'),
   alternates: {
@@ -15,9 +17,27 @@ export const metadata: Metadata = {
     template: '%s | IEEE - VBIT SB',
   },
   description: "The official website for the IEEE Student Branch at Vignana Bharathi Institute of Technology.",  
-  icons: [{ rel: 'icon', url: Favicon.src }], 
+  icons: [{ rel: 'icon', url: Favicon.src }],
+  
+  // Open Graph metadata for professional link previews on social media
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ieeevbitsb.in',
+    title: 'IEEE - VBIT SB | Advancing Technology for Humanity',
+    description: 'The official website for the IEEE Student Branch at VBIT, a hub for technical events, workshops, and community engagement.',
+    images: [
+      {
+        url: 'https://ieeevbitsb.in/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'IEEE VBIT SB Logo on a branded background',
+      },
+    ],
+  },
 };
 
+// Structured Data using JSON-LD for enhanced SEO
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -35,6 +55,7 @@ const jsonLd = {
     'https://www.instagram.com/ieee_vbitsb/',
     'https://www.linkedin.com/company/ieee-vbit-sb',
     'https://whatsapp.com/channel/0029Vb6F16ALdQekr3hPVz3D',
+    'https://vbithyd.ac.in/ieee-student-branch-of-vbit/'
   ],
 };
 
