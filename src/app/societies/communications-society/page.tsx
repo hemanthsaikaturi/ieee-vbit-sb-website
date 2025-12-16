@@ -74,6 +74,7 @@ export default function CommunicationsSocietyPage() {
                 width={500}
                 height={200}
                 objectFit="contain"
+                priority
               />
             </div>
           </div>

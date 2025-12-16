@@ -45,6 +45,7 @@ export default function AboutHydSectionPage() {
                 width={500}
                 height={150}
                 objectFit="contain"
+                priority
               />
             </div>
           </div>

@@ -63,7 +63,7 @@ export default function AboutIeeePage() {
               </p>
             </div>
             <div className="flex justify-center">
-              <Image src="/placeholders/IEEE_logo.webp" alt="IEEE Advancing Technology for Humanity" width={500} height={300} objectFit="contain" />
+              <Image src="/placeholders/IEEE_logo.webp" alt="IEEE Advancing Technology for Humanity" width={500} height={300} objectFit="contain" priority />
             </div>
           </div>
         </section>

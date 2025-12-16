@@ -59,6 +59,7 @@ export default function ComputerSocietyPage() {
                 width={500}
                 height={150}
                 objectFit="contain"
+                priority
               />
             </div>
           </div>

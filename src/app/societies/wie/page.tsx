@@ -72,6 +72,7 @@ export default function WiePage() {
                 width={400}
                 height={300}
                 objectFit="contain"
+                priority
               />
             </div>
           </div>

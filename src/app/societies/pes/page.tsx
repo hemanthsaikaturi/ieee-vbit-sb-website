@@ -54,6 +54,7 @@ export default function PesPage() {
                 width={400}
                 height={300}
                 objectFit="contain"
+                priority
               />
             </div>
           </div>

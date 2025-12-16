@@ -31,7 +31,7 @@ export default function AboutR10Page() {
               </a>
             </div>
             <div className="flex justify-center md:justify-end">
-              <Image src="/placeholders/ieee_region10_logo.webp" alt="IEEE Region 10 Logo" width={500} height={300} objectFit="contain" />
+              <Image src="/placeholders/ieee_region10_logo.webp" alt="IEEE Region 10 Logo" width={500} height={300} objectFit="contain" priority />
             </div>
           </div>
         </section>

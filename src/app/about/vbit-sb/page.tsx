@@ -77,6 +77,7 @@ export default function AboutVbitSbPage() {
                 width={400}
                 height={400}
                 objectFit="contain"
+                priority
               />
             </div>
           </div>
