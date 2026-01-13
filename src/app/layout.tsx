@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     url: 'https://ieeevbitsb.in',
     title: 'IEEE - VBIT SB | Advancing Technology for Humanity',
     description: 'The official website for the IEEE Student Branch at VBIT, a hub for technical events, workshops, and community engagement.',
+    siteName: 'IEEE - VBIT SB',
     images: [
       {
         url: 'https://ieeevbitsb.in/og-image.png',
@@ -50,7 +51,7 @@ const jsonLd = {
   'contactPoint': {
     '@type': 'ContactPoint',
     'email': 'ieeevbitsbdoc@gmail.com',
-    'contactType': 'Customer Service',
+    'contactType': 'Student Branch Inquiries',
   },
   'sameAs': [
     'https://www.facebook.com/ieeevbitsb',
