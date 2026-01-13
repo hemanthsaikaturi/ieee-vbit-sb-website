@@ -29,7 +29,7 @@ export const Footer = () => {
         <p className="text-sm text-gray-400 mb-4">Designed and Developed by Web Designers | IEEE - VBIT SB</p>
         
         <div className="max-w-4xl mx-auto text-xs text-gray-500 space-y-2">
-            <p>© Copyright 2025 IEEE – All rights reserved.</p>
+            <p>© Copyright 2026 IEEE – All rights reserved.</p>
             <p>A non profit Organisation, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.</p>
         </div>
       </div>
