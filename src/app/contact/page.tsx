@@ -122,7 +122,7 @@ export default function ContactPage() {
                     </div>
                     
                     <form 
-                      action="https://awtwepvxavskqluzklqi.supabase.co/functions/v1/contact-form" 
+                      action="https://queryviewer.ieeevbitsb.in/api/contact.php" 
                       method="POST" 
                       className="space-y-6" 
                       onSubmit={handleSubmit}
